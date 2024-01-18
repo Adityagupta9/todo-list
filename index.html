@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Todo List</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link id="stylesheet" rel="stylesheet" href="style1.css">
+</head>
+
+<body>
+  <button id="styleSwitchBtn" type="button" onclick="toggleStylesheet()">🌙</button>
+  <div id="main1">
+    <div id="ui">
+      <p class="head"><b>MY TODOS</b></p>
+    </div>
+    <p class="wel"><b>WELCOME</b></p>
+    <button class="add">Add List</button>
+    <i style="font-size:24px" class="fa">&#xf021; </i>
+  </div>
+
+  <script>
+    function toggleStylesheet() {
+      const linkElement = document.getElementById('stylesheet');
+      const currentStylesheet = linkElement.href;
+
+      if (currentStylesheet.includes('style1.css')) {
+        linkElement.href = 'style2.css';
+      } else {
+        linkElement.href = 'style1.css';
+      }
+    }
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
